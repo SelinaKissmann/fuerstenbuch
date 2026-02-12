@@ -1,0 +1,234 @@
+/* ===================================
+   FürstenBuch - Stylesheet
+   =================================== */
+
+/* CSS Variablen */
+:root {
+    --primary-color: #6b4c3b;
+    --secondary-color: #d4a574;
+    --accent-color: #8b5a2b;
+    --light-bg: #fdf8f3;
+    --dark-text: #2c2c2c;
+}
+
+/* ===================================
+   Basis Styles
+   =================================== */
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--dark-text);
+    background-color: var(--light-bg);
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Playfair Display', serif;
+}
+
+strong {
+    font-weight: 700;
+}
+
+/* ===================================
+   Hero Section
+   =================================== */
+.hero-section {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    color: white;
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="2"/></svg>');
+    background-size: 50px;
+}
+
+.hero-logo {
+    max-width: 150px;
+    height: auto;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    opacity: 0.95;
+    font-style: italic;
+}
+
+/* ===================================
+   Event Card
+   =================================== */
+.event-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    padding: 40px;
+    margin-top: -60px;
+    position: relative;
+    z-index: 10;
+}
+
+.event-badge {
+    background: var(--secondary-color);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+/* ===================================
+   Section Styling
+   =================================== */
+.section-title {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--secondary-color);
+    border-radius: 2px;
+}
+
+/* ===================================
+   Info Card
+   =================================== */
+.info-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card > .row {
+    height: 100%;
+    align-items: center;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.info-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+.info-icon {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.info-icon-small {
+	font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+/* ===================================
+   Download Buttons
+   =================================== */
+.download-btn {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.download-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(107, 76, 59, 0.4);
+    color: white;
+}
+
+.download-btn i {
+    font-size: 1.2rem;
+}
+
+/* ===================================
+   Alert Box
+   =================================== */
+.alert-custom {
+    background: linear-gradient(135deg, #fff5e6 0%, #ffe8cc 100%);
+    border: none;
+    border-left: 4px solid var(--secondary-color);
+    border-radius: 10px;
+}
+
+/* ===================================
+   Footer
+   =================================== */
+.footer {
+    background: var(--primary-color);
+    color: white;
+    padding: 30px 0;
+    margin-top: 60px;
+}
+
+/* ===================================
+   Responsive Design
+   =================================== */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-section {
+        padding: 50px 0;
+    }
+    
+    .event-card {
+        margin-top: -30px;
+        padding: 25px;
+    }
+	
+    .info-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info-card img {
+        max-height: 160px;
+        margin-bottom: 15px;
+    }
+}
+	
+footer a:hover {
+    text-decoration: underline;
+}
