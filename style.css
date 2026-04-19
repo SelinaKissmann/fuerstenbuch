@@ -228,6 +228,11 @@ strong {
         margin-bottom: 15px;
     }
 }
+
+.small-link {
+    font-size: 1.05rem;
+    white-space: nowrap; /* verhindert Zeilenumbruch */
+}
 	
 footer a:hover {
     text-decoration: underline;
