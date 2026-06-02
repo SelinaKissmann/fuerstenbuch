@@ -237,3 +237,46 @@ footer a:hover {
     font-size: 1.05rem;
     white-space: nowrap; /* verhindert Zeilenumbruch */
 }
+
+/* Stände & Lesungen Buttons */
+.download-btn-small {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 10px 22px;
+    border-radius: 30px;
+
+    background: white;
+    border: 2px solid var(--secondary-color);
+
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.download-btn-small i {
+    color: var(--secondary-color);
+}
+
+.download-btn-small:hover {
+    background: linear-gradient(
+        135deg,
+        var(--primary-color) 0%,
+        var(--accent-color) 100%
+    );
+
+    border-color: var(--accent-color);
+    color: white;
+
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(107, 76, 59, 0.25);
+}
+
+.download-btn-small:hover i {
+    color: white;
+}
